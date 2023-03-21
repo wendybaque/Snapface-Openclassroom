@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FaceSnap } from '../models/facesnap.model';
+import { FaceSnapsService } from '../services/face-snaps.service';
 
 @Component({
   selector: 'app-face-snap',
@@ -16,6 +17,10 @@ export class FaceSnapComponent implements OnInit {
   imageUrl!: string;
   buttonText!: string;
 
+  constructor(private faceSnapService:FaceSnapsService){
+
+  }
+  
   ngOnInit() {
     this.buttonText = 'Oh, Snap !';
   }
