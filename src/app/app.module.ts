@@ -14,6 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SignleFaceSnapComponent } from './signle-face-snap/signle-face-snap.component';
 import { NewFaceSnapComponent } from './new-face-snap/new-face-snap.component';
+import { httpInterceptorProviders } from './interceptors';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,10 @@ import { NewFaceSnapComponent } from './new-face-snap/new-face-snap.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-FR' },
+    httpInterceptorProviders,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {
