@@ -4,6 +4,7 @@ import { registerLocaleData } from '@angular/common';
 import * as fr from '@angular/common/locales/fr';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FaceSnapComponent } from './face-snap/face-snap.component';
@@ -23,7 +24,13 @@ import { NewFaceSnapComponent } from './new-face-snap/new-face-snap.component';
     SignleFaceSnapComponent,
     NewFaceSnapComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent],
 })
