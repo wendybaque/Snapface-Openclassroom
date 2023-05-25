@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { FaceSnap } from '../models/facesnap.model';
-import { FaceSnapsService } from '../services/face-snaps.service';
+import { FaceSnap } from '../../../core/models/facesnap.model';
+import { FaceSnapsService } from '../../../core/services/face-snaps.service';
 import { interval, take, tap, Subject, takeUntil, Observable } from 'rxjs';
 // Subject : observable qu'on peut faire émettre quand on veut.
 
